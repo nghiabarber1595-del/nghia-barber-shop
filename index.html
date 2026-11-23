@@ -1,1 +1,227 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nghĩa Barber Shop - Đặt lịch</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#101010;
+  color:#fff;
+  font-family:Arial,sans-serif;
+}
+.container{
+  max-width:520px;
+  margin:auto;
+  padding:22px 18px 40px;
+}
+header{text-align:center;padding:20px 0}
+.logo{
+  color:#d6ad60;
+  font-size:30px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+.sub{
+  color:#aaa;
+  font-size:12px;
+  letter-spacing:4px;
+  margin-top:8px;
+}
+h2{
+  font-size:22px;
+  margin-top:28px;
+  border-bottom:1px solid #333;
+  padding-bottom:12px;
+}
+.services{
+  display:grid;
+  gap:10px;
+}
+.service{
+  border:1px solid #333;
+  border-radius:10px;
+  padding:14px;
+  background:#1a1a1a;
+}
+.service strong{display:block;margin-bottom:6px}
+.price{color:#d6ad60;font-weight:bold}
+label{
+  display:block;
+  margin:15px 0 7px;
+  color:#ccc;
+  font-size:14px;
+}
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #3a3a3a;
+  border-radius:8px;
+  background:#1c1c1c;
+  color:white;
+  font-size:16px;
+}
+textarea{min-height:80px;resize:vertical}
+button{
+  width:100%;
+  margin-top:22px;
+  padding:16px;
+  background:#d6ad60;
+  border:none;
+  border-radius:9px;
+  color:#111;
+  font-weight:bold;
+  font-size:16px;
+}
+.info{
+  margin-top:28px;
+  padding:16px;
+  background:#1a1a1a;
+  border-radius:10px;
+  color:#ccc;
+  line-height:1.7;
+  font-size:14px;
+}
+.info strong{color:#d6ad60}
+footer{
+  text-align:center;
+  color:#777;
+  font-size:12px;
+  margin-top:25px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">NGHĨA BARBER SHOP</div>
+  <div class="sub">GENTLEMEN'S HAIRCUT</div>
+</header>
+
+<h2>Dịch vụ</h2>
+<div class="services">
+  <div class="service">
+    <strong>Cắt tóc nam</strong>
+    <span class="price">50.000đ</span>
+  </div>
+  <div class="service">
+    <strong>Cắt + Tạo kiểu + Gội lại</strong>
+    <span class="price">70.000đ</span>
+  </div>
+  <div class="service">
+    <strong>Nhuộm màu tự nhiên</strong>
+    <span class="price">200.000đ</span>
+  </div>
+  <div class="service">
+    <strong>Uốn / Ép tóc</strong>
+    <span class="price">250.000đ</span>
+  </div>
+  <div class="service">
+    <strong>VIP – Cắt + Râu + Gội + Rửa mặt + Tạo kiểu</strong>
+    <span class="price">90.000đ</span>
+  </div>
+  <div class="service">
+    <strong>Vuốt tóc</strong>
+    <span class="price">40.000đ</span>
+  </div>
+</div>
+
+<h2>Đặt lịch</h2>
+<form id="bookingForm">
+  <label>Họ và tên</label>
+  <input id="name" type="text" placeholder="Nhập họ tên" required>
+
+  <label>Số điện thoại</label>
+  <input id="phone" type="tel" placeholder="Nhập số điện thoại" required>
+
+  <label>Chọn dịch vụ</label>
+  <select id="service" required>
+    <option value="">-- Chọn dịch vụ --</option>
+    <option>Cắt tóc nam - 50.000đ</option>
+    <option>Cắt + Tạo kiểu + Gội lại - 70.000đ</option>
+    <option>Nhuộm màu tự nhiên - 200.000đ</option>
+    <option>Uốn / Ép tóc - 250.000đ</option>
+    <option>VIP - 90.000đ</option>
+    <option>Vuốt tóc - 40.000đ</option>
+  </select>
+
+  <label>Ngày muốn đặt</label>
+  <input id="date" type="date" required>
+
+  <label>Giờ muốn đặt</label>
+  <select id="time" required>
+    <option value="">-- Chọn giờ --</option>
+    <option>08:15</option>
+    <option>08:30</option>
+    <option>09:00</option>
+    <option>09:30</option>
+    <option>10:00</option>
+    <option>10:30</option>
+    <option>11:00</option>
+    <option>11:30</option>
+    <option>14:15</option>
+    <option>14:30</option>
+    <option>15:00</option>
+    <option>15:30</option>
+    <option>16:00</option>
+    <option>16:30</option>
+    <option>17:00</option>
+    <option>17:30</option>
+    <option>18:00</option>
+    <option>18:30</option>
+    <option>19:00</option>
+    <option>19:30</option>
+  </select>
+
+  <label>Ghi chú (nếu có)</label>
+  <textarea id="note" placeholder="Bạn muốn kiểu tóc nào?"></textarea>
+
+  <button type="submit">GỬI YÊU CẦU ĐẶT LỊCH</button>
+</form>
+
+<div class="info">
+  <strong>Địa chỉ:</strong><br>
+  Đối diện trạm sạc VinFast, Khu công nghiệp Lương Sơn<br><br>
+  <strong>Giờ mở cửa:</strong><br>
+  08:15–11:30 | 14:15–19:30 (Thứ 2 – Chủ nhật)<br><br>
+  <strong>Hotline:</strong> 0364355405
+</div>
+
+<footer>© Nghĩa Barber Shop</footer>
+</div>
+
+<script>
+const dateInput = document.getElementById("date");
+const today = new Date();
+const localToday = new Date(today.getTime() - today.getTimezoneOffset()*60000)
+  .toISOString().split("T")[0];
+dateInput.min = localToday;
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const note = document.getElementById("note").value.trim();
+
+  const message =
+    "YEU CAU DAT LICH - NGHIA BARBER SHOP\n" +
+    "Ten: " + name + "\n" +
+    "SDT: " + phone + "\n" +
+    "Dich vu: " + service + "\n" +
+    "Ngay: " + date + "\n" +
+    "Gio: " + time + "\n" +
+    "Ghi chu: " + (note || "Khong co");
+
+  window.location.href = "sms:0364355405&body=" + encodeURIComponent(message);
+});
+</script>
+</body>
+</html>
