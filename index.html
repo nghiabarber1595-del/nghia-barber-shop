@@ -201,7 +201,8 @@ const localToday = new Date(today.getTime() - today.getTimezoneOffset()*60000)
   .toISOString().split("T")[0];
 dateInput.min = localToday;
 
-document.getElementById("bookingForm").addEventListener("submit", function(e){
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
@@ -212,12 +213,14 @@ document.getElementById("bookingForm").addEventListener("submit", function(e){
   const note = document.getElementById("note").value.trim();
 
   const message =
-    "YEU CAU DAT LICH - NGHIA BARBER SHOP\n" +
-    "Ten: " + name + "\n" +
-    "SDT: " + phone + "\n" +
+    "DAT LICH NGHIA BARBER SHOP\n" +
+    "Ho ten: " + name + "\n" +
+    "So dien thoai: " + phone + "\n" +
     "Dich vu: " + service + "\n" +
     "Ngay: " + date + "\n" +
     "Gio: " + time + "\n" +
-    "Ghi chu: " + (note || "Khong co");
+    "Ghi chu: " + note;
 
-  window.location.href = "https://www.facebook.com/share/18k2dQ73pC/?mibextid=wwXIfr";
+  window.location.href =
+    "https://www.facebook.com/share/18k2dQ73pC/?mibextid=wwXIfr";
+});
