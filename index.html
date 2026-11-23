@@ -201,27 +201,40 @@ const localToday = new Date(today.getTime() - today.getTimezoneOffset()*60000)
   .toISOString().split("T")[0];
 dateInput.min = localToday;
 
-document.getElementById("bookingForm").addEventListener("submit", function(e){
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
+
   const phone = document.getElementById("phone").value.trim();
+
   const service = document.getElementById("service").value;
+
   const date = document.getElementById("date").value;
+
   const time = document.getElementById("time").value;
+
   const note = document.getElementById("note").value.trim();
 
   const message =
-    "YEU CAU DAT LICH - NGHIA BARBER SHOP\n" +
-    "Ten: " + name + "\n" +
-    "SDT: " + phone + "\n" +
-    "Dich vu: " + service + "\n" +
-    "Ngay: " + date + "\n" +
-    "Gio: " + time + "\n" +
-    "Ghi chu: " + (note || "Khong co");
 
-  window.location.href = "sms:0364355405&body=" + encodeURIComponent(message);
+    "XIN ĐẶT LỊCH NGHĨA BARBER SHOP\n" +
+
+    "Họ tên: " + name + "\n" +
+
+    "Số điện thoại: " + phone + "\n" +
+
+    "Dịch vụ: " + service + "\n" +
+
+    "Ngày: " + date + "\n" +
+
+    "Giờ: " + time + "\n" +
+
+    "Ghi chú: " + (note || "Không có");
+
+  const facebook = "https://www.facebook.com/share/18k2dQ73pC/?mibextid=wwXIfr";
+
+  window.location.href = facebook;
+
 });
-</script>
-</body>
-</html>
