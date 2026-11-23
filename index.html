@@ -3,97 +3,165 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nghĩa Barber Shop - Đặt lịch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101010">
+<title>Nghĩa Barber Shop | Đặt lịch</title>
+
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:#101010;
-  color:#fff;
-  font-family:Arial,sans-serif;
+* {
+  box-sizing: border-box;
 }
-.container{
-  max-width:520px;
-  margin:auto;
-  padding:22px 18px 40px;
+
+body {
+  margin: 0;
+  background: #101010;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
-header{text-align:center;padding:20px 0}
-.logo{
-  color:#d6ad60;
-  font-size:30px;
-  font-weight:bold;
-  letter-spacing:3px;
+
+.container {
+  max-width: 520px;
+  margin: auto;
+  padding: 22px 18px 40px;
 }
-.sub{
-  color:#aaa;
-  font-size:12px;
-  letter-spacing:4px;
-  margin-top:8px;
+
+header {
+  text-align: center;
+  padding: 28px 0;
 }
-h2{
-  font-size:22px;
-  margin-top:28px;
-  border-bottom:1px solid #333;
-  padding-bottom:12px;
+
+.logo {
+  color: #d6ad60;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
-.services{
-  display:grid;
-  gap:10px;
+
+.sub {
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-top: 10px;
 }
-.service{
-  border:1px solid #333;
-  border-radius:10px;
-  padding:14px;
-  background:#1a1a1a;
+
+.banner {
+  border: 1px solid #3c3220;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  background: linear-gradient(135deg, #201b13, #151515);
+  color: #d6ad60;
+  line-height: 1.6;
 }
-.service strong{display:block;margin-bottom:6px}
-.price{color:#d6ad60;font-weight:bold}
-label{
-  display:block;
-  margin:15px 0 7px;
-  color:#ccc;
-  font-size:14px;
+
+h2 {
+  font-size: 21px;
+  margin-top: 28px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 12px;
 }
-input,select,textarea{
-  width:100%;
-  padding:13px;
-  border:1px solid #3a3a3a;
-  border-radius:8px;
-  background:#1c1c1c;
-  color:white;
-  font-size:16px;
+
+.services {
+  display: grid;
+  gap: 10px;
 }
-textarea{min-height:80px;resize:vertical}
-button{
-  width:100%;
-  margin-top:22px;
-  padding:16px;
-  background:#d6ad60;
-  border:none;
-  border-radius:9px;
-  color:#111;
-  font-weight:bold;
-  font-size:16px;
+
+.service {
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  background: #1a1a1a;
 }
-.info{
-  margin-top:28px;
-  padding:16px;
-  background:#1a1a1a;
-  border-radius:10px;
-  color:#ccc;
-  line-height:1.7;
-  font-size:14px;
+
+.service strong {
+  display: block;
+  margin-bottom: 7px;
 }
-.info strong{color:#d6ad60}
-footer{
-  text-align:center;
-  color:#777;
-  font-size:12px;
-  margin-top:25px;
+
+.price {
+  color: #d6ad60;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 16px 0 7px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: #1c1c1c;
+  color: white;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button, .contact-btn {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px;
+  border: none;
+  border-radius: 9px;
+  background: #d6ad60;
+  color: #111;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .6;
+}
+
+.fb-btn {
+  background: #252525;
+  border: 1px solid #444;
+  color: white;
+}
+
+.info {
+  margin-top: 28px;
+  padding: 17px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.info strong {
+  color: #d6ad60;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.small-note {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.6;
+  margin-top: 12px;
+  text-align: center;
 }
 </style>
 </head>
+
 <body>
 <div class="container">
 
@@ -102,28 +170,39 @@ footer{
   <div class="sub">GENTLEMEN'S HAIRCUT</div>
 </header>
 
+<div class="banner">
+  Đặt lịch trước để được phục vụ nhanh chóng<br>
+  <strong>Phong cách của bạn – Chất riêng của bạn</strong>
+</div>
+
 <h2>Dịch vụ</h2>
+
 <div class="services">
   <div class="service">
     <strong>Cắt tóc nam</strong>
     <span class="price">50.000đ</span>
   </div>
+
   <div class="service">
     <strong>Cắt + Tạo kiểu + Gội lại</strong>
     <span class="price">70.000đ</span>
   </div>
+
   <div class="service">
     <strong>Nhuộm màu tự nhiên</strong>
     <span class="price">200.000đ</span>
   </div>
+
   <div class="service">
     <strong>Uốn / Ép tóc</strong>
     <span class="price">250.000đ</span>
   </div>
+
   <div class="service">
     <strong>VIP – Cắt + Râu + Gội + Rửa mặt + Tạo kiểu</strong>
     <span class="price">90.000đ</span>
   </div>
+
   <div class="service">
     <strong>Vuốt tóc</strong>
     <span class="price">40.000đ</span>
@@ -131,14 +210,16 @@ footer{
 </div>
 
 <h2>Đặt lịch</h2>
+
 <form id="bookingForm">
-  <label>Họ và tên</label>
+
+  <label for="name">Họ và tên</label>
   <input id="name" type="text" placeholder="Nhập họ tên" required>
 
-  <label>Số điện thoại</label>
+  <label for="phone">Số điện thoại</label>
   <input id="phone" type="tel" placeholder="Nhập số điện thoại" required>
 
-  <label>Chọn dịch vụ</label>
+  <label for="service">Chọn dịch vụ</label>
   <select id="service" required>
     <option value="">-- Chọn dịch vụ --</option>
     <option>Cắt tóc nam - 50.000đ</option>
@@ -149,10 +230,10 @@ footer{
     <option>Vuốt tóc - 40.000đ</option>
   </select>
 
-  <label>Ngày muốn đặt</label>
+  <label for="date">Ngày muốn đặt</label>
   <input id="date" type="date" required>
 
-  <label>Giờ muốn đặt</label>
+  <label for="time">Giờ muốn đặt</label>
   <select id="time" required>
     <option value="">-- Chọn giờ --</option>
     <option>08:15</option>
@@ -177,62 +258,133 @@ footer{
     <option>19:30</option>
   </select>
 
-  <label>Ghi chú (nếu có)</label>
+  <label for="note">Ghi chú (nếu có)</label>
   <textarea id="note" placeholder="Bạn muốn kiểu tóc nào?"></textarea>
 
-  <button type="submit">GỬI YÊU CẦU ĐẶT LỊCH</button>
+  <button id="bookingButton" type="submit">
+    GỬI YÊU CẦU ĐẶT LỊCH
+  </button>
+
+  <p class="small-note">
+    Sau khi bấm đặt lịch, Messenger sẽ mở để bạn gửi thông tin cho shop.
+  </p>
+
 </form>
+
+<h2>Liên hệ</h2>
+
+<a class="contact-btn"
+   href="https://m.me/NghiaHoang15905"
+   target="_blank"
+   rel="noopener">
+  NHẮN TIN MESSENGER
+</a>
+
+<a class="contact-btn fb-btn"
+   href="https://www.facebook.com/share/1A38d8hTSF/?mibextid=wwXIfr"
+   target="_blank"
+   rel="noopener">
+  FACEBOOK SHOP
+</a>
 
 <div class="info">
   <strong>Địa chỉ:</strong><br>
   Đối diện trạm sạc VinFast, Khu công nghiệp Lương Sơn<br><br>
+
   <strong>Giờ mở cửa:</strong><br>
-  08:15–11:30 | 14:15–19:30 (Thứ 2 – Chủ nhật)<br><br>
-  <strong>Hotline:</strong> 0364355405
+  08:15–11:30 | 14:15–19:30<br>
+  Thứ 2 – Chủ nhật<br><br>
+
+  <strong>Hotline:</strong><br>
+  <a href="tel:0364355405" style="color:#d6ad60">
+    0364355405
+  </a>
 </div>
 
 <footer>© Nghĩa Barber Shop</footer>
+
 </div>
 
 <script>
-const dateInput = document.getElementById("date");
-const today = new Date();
-const localToday = new Date(today.getTime() - today.getTimezoneOffset()*60000)
-  .toISOString().split("T")[0];
-dateInput.min = localToday;
+(function () {
+  const form = document.getElementById("bookingForm");
+  const dateInput = document.getElementById("date");
+  const button = document.getElementById("bookingButton");
 
+  // Chặn chọn ngày trong quá khứ
+  const now = new Date();
+  const today = new Date(
+    now.getTime() - now.getTimezoneOffset() * 60000
+  ).toISOString().split("T")[0];
 
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+  dateInput.min = today;
 
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const service = document.getElementById("service").value;
-  const date = document.getElementById("date").value;
-  const time = document.getElementById("time").value;
-  const note = document.getElementById("note").value.trim();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const message =
-    "DAT LICH NGHIA BARBER SHOP\n" +
-    "Ho ten: " + name + "\n" +
-    "So dien thoai: " + phone + "\n" +
-    "Dich vu: " + service + "\n" +
-    "Ngay: " + date + "\n" +
-    "Gio: " + time + "\n" +
-    "Ghi chu: " + note;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
-  const messenger = "https://m.me/NghiaHoang15905";
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const note = document.getElementById("note").value.trim();
 
-  try {
-    const field = document.createElement("textarea");
-    field.value = message;
-    document.body.appendChild(field);
-    field.select();
-    document.execCommand("copy");
-    field.remove();
-  } catch (error) {}
+    const message =
+      "DAT LICH NGHIA BARBER SHOP\n" +
+      "Ho ten: " + name + "\n" +
+      "So dien thoai: " + phone + "\n" +
+      "Dich vu: " + service + "\n" +
+      "Ngay: " + date + "\n" +
+      "Gio: " + time + "\n" +
+      "Ghi chu: " + (note || "Khong co");
 
-  alert("Thông tin đặt lịch đã được chuẩn bị. Hãy dán nội dung vào Messenger và gửi cho shop.");
+    // Mở Messenger ngay khi khách bấm nút
+    const messengerWindow = window.open(
+      "https://m.me/NghiaHoang15905",
+      "_blank"
+    );
 
-  window.location.href = messenger;
-});
+    // Sao chép thông tin đặt lịch
+    let copied = false;
+
+    try {
+      const textArea = document.createElement("textarea");
+      textArea.value = message;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      textArea.style.top = "0";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      copied = document.execCommand("copy");
+      textArea.remove();
+    } catch (err) {
+      copied = false;
+    }
+
+    // Hướng dẫn khách gửi tin
+    if (messengerWindow) {
+      alert(
+        copied
+          ? "Da sao chep thong tin dat lich!\n\n" +
+            "Hay sang Messenger, dan (Paste) thong tin va bam Gui cho shop."
+          : "Messenger da duoc mo.\n\n" +
+            "Hay quay lai website, bam Sao chep thong tin va dan vao Messenger."
+      );
+    } else {
+      alert(
+        "Trinh duyet dang chan cua so Messenger.\n\n" +
+        "Hay bam nut Messenger tren website de mo chat."
+      );
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
