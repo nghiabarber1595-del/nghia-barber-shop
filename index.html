@@ -202,6 +202,7 @@ const localToday = new Date(today.getTime() - today.getTimezoneOffset()*60000)
 dateInput.min = localToday;
 
 
+
 document.getElementById("bookingForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -220,5 +221,11 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     "Ngay: " + date + "\n" +
     "Gio: " + time + "\n" +
     "Ghi chu: " + note;
-window.location.href = "https://m.me/NghiaHoang15905"});</body>
-</html>
+
+  navigator.clipboard.writeText(message).then(function() {
+    alert("Da sao chep thong tin dat lich. Hay dan vao Messenger de gui cho shop!");
+    window.location.href = "https://m.me/NghiaHoang15905";
+  }).catch(function() {
+    alert("Khong the sao chep. Vui long thu lai!");
+  });
+});
