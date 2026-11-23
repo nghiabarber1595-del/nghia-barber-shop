@@ -202,7 +202,6 @@ const localToday = new Date(today.getTime() - today.getTimezoneOffset()*60000)
 dateInput.min = localToday;
 
 
-
 document.getElementById("bookingForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -222,10 +221,18 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     "Gio: " + time + "\n" +
     "Ghi chu: " + note;
 
-  navigator.clipboard.writeText(message).then(function() {
-    alert("Da sao chep thong tin dat lich. Hay dan vao Messenger de gui cho shop!");
-    window.location.href = "https://m.me/NghiaHoang15905";
-  }).catch(function() {
-    alert("Khong the sao chep. Vui long thu lai!");
-  });
+  const messenger = "https://m.me/NghiaHoang15905";
+
+  try {
+    const field = document.createElement("textarea");
+    field.value = message;
+    document.body.appendChild(field);
+    field.select();
+    document.execCommand("copy");
+    field.remove();
+  } catch (error) {}
+
+  alert("Thông tin đặt lịch đã được chuẩn bị. Hãy dán nội dung vào Messenger và gửi cho shop.");
+
+  window.location.href = messenger;
 });
